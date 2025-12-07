@@ -67,6 +67,7 @@ lapicinit(void)
   lapicw(TDCR, X1);
   lapicw(TIMER, PERIODIC | (T_IRQ0 + IRQ_TIMER));
   lapicw(TICR, 10000000);
+  cprintf("Timer Interrupt Interval: %d cycles\n", 10000000);
 
   // Disable logical interrupt lines.
   lapicw(LINT0, MASKED);

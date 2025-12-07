@@ -501,7 +501,7 @@ scheduler(void)
       release(&ptable.lock);
     }
     else {
-        // hlt(); 
+        hlt(); 
     }
   }
 }
